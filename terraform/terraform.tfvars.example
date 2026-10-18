@@ -1,0 +1,5 @@
+# Copy to terraform.tfvars (that file is git-ignored) and edit.
+aws_region   = "ap-south-1"
+docker_image = "your-dockerhub-username/fraudguard:latest"
+# ssh_cidr   = "203.0.113.10/32"   # your public IP, only if you need SSH
+# key_name   = "my-key-pair"

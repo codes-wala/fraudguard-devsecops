@@ -1,0 +1,17 @@
+.git
+.github
+.venv
+__pycache__
+*.pyc
+tests
+docs
+terraform
+tools
+scripts
+reports
+coverage.xml
+.coverage
+*.md
+Jenkinsfile
+sonar-project.properties
+mutation_test.py

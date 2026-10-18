@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FraudGuard – AI-Based Fraud Detection (DevSecOps Edition)</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <div><h1>Fraud<span>Guard</span> · Hybrid Rules + ML</h1>
+  <div class="sub">DevSecOps Lab Microproject · Path &amp; Condition Testing of an AI-Based Fraud Detection Prototype · SDG 9</div></div>
+  <div class="sub">Model (synthetic data): precision {{ metrics.precision }} · recall {{ metrics.recall }} · accuracy {{ metrics.accuracy }}</div>
+</header>
+<main>
+  <section class="card">
+    <h2>Transaction</h2>
+    <div>
+      <button class="ghost" data-preset="normal">Normal purchase</button>
+      <button class="ghost" data-preset="foreign">High amount, foreign</button>
+      <button class="ghost" data-preset="structuring">Structuring pattern</button>
+      <button class="ghost" data-preset="blacklist">Blacklisted merchant</button>
+      <button class="ghost" data-preset="invalid">Invalid input</button>
+    </div>
+    <div class="grid top">
+      <div><label for="amount">Amount (₹)</label><input id="amount" type="number" value="1500"></div>
+      <div><label for="hour">Hour of day (0-23)</label><input id="hour" type="number" value="14"></div>
+      <div><label for="txn_last_hour">Transactions in last hour</label><input id="txn_last_hour" type="number" value="1"></div>
+      <div><label for="account_age_days">Account age (days)</label><input id="account_age_days" type="number" value="400"></div>
+      <div class="full"><label for="recent_amounts">Recent amounts (comma separated)</label><input id="recent_amounts" type="text" placeholder="e.g. 47000, 48500, 49000"></div>
+    </div>
+    <div class="checks">
+      <label><input type="checkbox" id="is_foreign"> Foreign location</label>
+      <label><input type="checkbox" id="is_new_device"> New device</label>
+      <label><input type="checkbox" id="is_blacklisted_merchant"> Blacklisted merchant</label>
+    </div>
+    <button class="primary" id="assess-btn">Assess transaction</button>
+  </section>
+
+  <section class="card">
+    <h2>Decision</h2>
+    <div id="result"><span class="sub">Submit a transaction to see the verdict.</span></div>
+  </section>
+
+  <section class="card full">
+    <h2>Session log</h2>
+    <table><thead><tr><th>#</th><th>Amount</th><th>Hour</th><th>Velocity</th><th>Verdict</th><th>Risk pts</th><th>ML score</th></tr></thead>
+    <tbody id="log"></tbody></table>
+  </section>
+</main>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

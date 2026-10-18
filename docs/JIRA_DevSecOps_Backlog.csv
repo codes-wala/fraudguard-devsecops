@@ -1,0 +1,14 @@
+Issue Type,Summary,Description,Story Points,Priority,Sprint
+Epic,DevSecOps Website and Pipeline,,,,Sprint 4
+Story,Harden the FraudGuard website (headers; CSP; input checks),Epic: DevSecOps,3,High,Sprint 4
+Story,Create GitHub repository and push source,Epic: DevSecOps,1,High,Sprint 4
+Story,Write Dockerfile and run the container,Epic: DevSecOps,3,High,Sprint 4
+Story,Write Jenkinsfile with build and test stages,Epic: DevSecOps,5,High,Sprint 4
+Story,Add SonarQube analysis to the pipeline,Epic: DevSecOps,3,High,Sprint 4
+Story,Add Trivy dependency and image scans,Epic: DevSecOps,3,High,Sprint 4
+Story,Write Terraform for AWS EC2 and apply it,Epic: DevSecOps,5,High,Sprint 5
+Task,Prepare basic vulnerability report with screenshots,Epic: DevSecOps,3,High,Sprint 5
+Task,Draw architecture and CI/CD diagrams,Epic: DevSecOps,2,Medium,Sprint 5
+Task,Write DevSecOps report,Epic: DevSecOps,5,High,Sprint 5
+Task,Prepare PPT,Epic: DevSecOps,3,High,Sprint 5
+Task,Record demo video and post on LinkedIn,Epic: DevSecOps,2,High,Sprint 5

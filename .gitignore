@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.venv/
+.coverage
+coverage.xml
+reports/*
+!reports/.gitkeep
+# Terraform - never commit state or variable files (they can contain secrets)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+crash.log
+# secrets
+.env
+*.pem
+*.key
